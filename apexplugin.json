@@ -25,7 +25,7 @@
       "versions" : ["23.1.0"],
       "plugin" : {
         "internalName" : "TEXT.COMPARE.EPOLANCO",
-        "type" : "Template Component",
+        "type" : "template component",
         "demo" : "https://apex.oracle.com/pls/apex/f?p=247444:2",
         "previewImage" : "https://apex.oracle.com/pls/apex/r/ejpr/247444/files/static/v137/demo_compare.PNG"
       }
