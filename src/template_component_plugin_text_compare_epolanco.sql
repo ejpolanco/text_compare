@@ -33,12 +33,12 @@ prompt APPLICATION 247444 - Plugins
 -- Application Export:
 --   Application:     247444
 --   Name:            Plugins
---   Date and Time:   03:06 Thursday September 28, 2023
+--   Date and Time:   03:34 Thursday September 28, 2023
 --   Exported By:     EPOLANCO@INSUM.CA
 --   Flashback:       0
 --   Export Type:     Component Export
 --   Manifest
---     PLUGIN: 70733197924498844506
+--     PLUGIN: 71470447502572260223
 --   Manifest End
 --   Version:         23.1.3
 --   Instance ID:     63113759365424
@@ -49,13 +49,13 @@ begin
   wwv_flow_imp.g_mode := 'REPLACE';
 end;
 /
-prompt --application/shared_components/plugins/template_component/text_compare_by_ender_polanco
+prompt --application/shared_components/plugins/template_component/text_compare_epolanco
 begin
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(70733197924498844506)
+ p_id=>wwv_flow_imp.id(71470447502572260223)
 ,p_plugin_type=>'TEMPLATE COMPONENT'
 ,p_theme_id=>nvl(wwv_flow_application_install.get_theme_id, '')
-,p_name=>'TEXT_COMPARE_BY_ENDER_POLANCO'
+,p_name=>'TEXT.COMPARE.EPOLANCO'
 ,p_display_name=>'Text Compare'
 ,p_supported_component_types=>'PARTIAL:REPORT'
 ,p_javascript_file_urls=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -94,11 +94,11 @@ wwv_flow_imp_shared.create_plugin(
 '3. Select the column holding the "New text"',
 '4. Under the columns properties, Section "Settings", Select the corresponding columns to use in each parameter.'))
 ,p_version_identifier=>'1.0'
-,p_files_version=>46
+,p_files_version=>51
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(70733198242079844521)
-,p_plugin_id=>wwv_flow_imp.id(70733197924498844506)
+ p_id=>wwv_flow_imp.id(71470447819746260223)
+,p_plugin_id=>wwv_flow_imp.id(71470447502572260223)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -112,8 +112,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'This is the Original or Previous text you want to compare to a modified one.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(70733198616273844522)
-,p_plugin_id=>wwv_flow_imp.id(70733197924498844506)
+ p_id=>wwv_flow_imp.id(71470448282363260224)
+,p_plugin_id=>wwv_flow_imp.id(71470447502572260223)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -127,8 +127,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_help_text=>'This attributes correspond to the "New" or "Modified" text you want to compare with the original.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(70767175771823390236)
-,p_plugin_id=>wwv_flow_imp.id(70733197924498844506)
+ p_id=>wwv_flow_imp.id(71470448611141260224)
+,p_plugin_id=>wwv_flow_imp.id(71470447502572260223)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -141,6 +141,41 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_translatable=>false
 ,p_examples=>'PK of the table or unique index column.'
 ,p_help_text=>'A unique string that identifies the row.'
+);
+end;
+/
+begin
+wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
+wwv_flow_imp.g_varchar2_table(1) := '696E73207B0D0A20206261636B67726F756E643A20236539663665663B0D0A2020746578742D6465636F726174696F6E3A206E6F6E653B0D0A2020636F6C6F723A20233062333431633B0D0A7D0D0A0D0A64656C207B0D0A2020636F6C6F723A20236330';
+wwv_flow_imp.g_varchar2_table(2) := '333932623B0D0A20206261636B67726F756E643A20236638656265393B0D0A7D';
+null;
+end;
+/
+begin
+wwv_flow_imp_shared.create_plugin_file(
+ p_id=>wwv_flow_imp.id(71470449020268260226)
+,p_plugin_id=>wwv_flow_imp.id(71470447502572260223)
+,p_file_name=>'compateStyle.css'
+,p_mime_type=>'text/css'
+,p_file_charset=>'utf-8'
+,p_file_content=>wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
+);
+end;
+/
+begin
+wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
+wwv_flow_imp.g_varchar2_table(1) := '696E737B6261636B67726F756E643A236539663665663B746578742D6465636F726174696F6E3A6E6F6E653B636F6C6F723A233062333431637D64656C7B636F6C6F723A236330333932623B6261636B67726F756E643A236638656265397D';
+null;
+end;
+/
+begin
+wwv_flow_imp_shared.create_plugin_file(
+ p_id=>wwv_flow_imp.id(71470449476109260227)
+,p_plugin_id=>wwv_flow_imp.id(71470447502572260223)
+,p_file_name=>'compateStyle.min.css'
+,p_mime_type=>'text/css'
+,p_file_charset=>'utf-8'
+,p_file_content=>wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
 );
 end;
 /
@@ -196,8 +231,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(70737208309103892514)
-,p_plugin_id=>wwv_flow_imp.id(70733197924498844506)
+ p_id=>wwv_flow_imp.id(71470449834787260228)
+,p_plugin_id=>wwv_flow_imp.id(71470447502572260223)
 ,p_file_name=>'htmldiff.js'
 ,p_mime_type=>'text/javascript'
 ,p_file_charset=>'utf-8'
@@ -214,45 +249,10 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(70770280500567689570)
-,p_plugin_id=>wwv_flow_imp.id(70733197924498844506)
+ p_id=>wwv_flow_imp.id(71470450221834260228)
+,p_plugin_id=>wwv_flow_imp.id(71470447502572260223)
 ,p_file_name=>'textCompare.js'
 ,p_mime_type=>'text/javascript'
-,p_file_charset=>'utf-8'
-,p_file_content=>wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
-);
-end;
-/
-begin
-wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
-wwv_flow_imp.g_varchar2_table(1) := '696E73207B0D0A20206261636B67726F756E643A20236539663665663B0D0A2020746578742D6465636F726174696F6E3A206E6F6E653B0D0A2020636F6C6F723A20233062333431633B0D0A7D0D0A0D0A64656C207B0D0A2020636F6C6F723A20236330';
-wwv_flow_imp.g_varchar2_table(2) := '333932623B0D0A20206261636B67726F756E643A20236638656265393B0D0A7D';
-null;
-end;
-/
-begin
-wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(70866326097698901268)
-,p_plugin_id=>wwv_flow_imp.id(70733197924498844506)
-,p_file_name=>'compateStyle.css'
-,p_mime_type=>'text/css'
-,p_file_charset=>'utf-8'
-,p_file_content=>wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
-);
-end;
-/
-begin
-wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
-wwv_flow_imp.g_varchar2_table(1) := '696E737B6261636B67726F756E643A236539663665663B746578742D6465636F726174696F6E3A6E6F6E653B636F6C6F723A233062333431637D64656C7B636F6C6F723A236330333932623B6261636B67726F756E643A236638656265397D';
-null;
-end;
-/
-begin
-wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(70873828672196065489)
-,p_plugin_id=>wwv_flow_imp.id(70733197924498844506)
-,p_file_name=>'compateStyle.min.css'
-,p_mime_type=>'text/css'
 ,p_file_charset=>'utf-8'
 ,p_file_content=>wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
 );
@@ -266,8 +266,8 @@ end;
 /
 begin
 wwv_flow_imp_shared.create_plugin_file(
- p_id=>wwv_flow_imp.id(70930587359887425463)
-,p_plugin_id=>wwv_flow_imp.id(70733197924498844506)
+ p_id=>wwv_flow_imp.id(71470450652452260228)
+,p_plugin_id=>wwv_flow_imp.id(71470447502572260223)
 ,p_file_name=>'textCompare.min.js'
 ,p_mime_type=>'text/javascript'
 ,p_file_charset=>'utf-8'
