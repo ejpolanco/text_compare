@@ -1,0 +1,36 @@
+{
+  "name" : "Text Compare",
+  "version" : "1.0",
+  "description" : "Compare the text in two columns of a Report and show the differences in a HTML Output.",
+  "keywords" : ["compare", "difference", "text", "report"],
+  "homepage" : "https://github.com/ejpolanco/text_compare",
+  "bugs" : {
+    "url" : "https://github.com/ejpolanco/text_compare/issues",
+    "email" : "enderpolanco@gmail.com"
+  },
+  "license" : "MIT",
+  "commercial" : "No",
+  "author" : {
+    "name" : "Ender Polanco",
+    "email" : "enderpolanco@gmail.com",
+    "url" : "https://epolanco.dev/"
+    "twitter" : "ej_polanco"
+    "donationUrl" : ""
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/Dani3lSun/apex-plugin-guidedtour.git"
+  },
+  "oracle" : {
+    "versions" : ["19.2.0.1", "12.1.0.1"],
+    "apex" : {
+      "versions" : ["21.1.0"],
+      "plugin" : {
+        "internalName" : "TEXT.COMPARE.EPOLANCO",
+        "type" : "Template Component",
+        "demo" : "https://apex.oracle.com/pls/apex/f?p=247444:2",
+        "previewImage" : "https://apex.oracle.com/pls/apex/r/ejpr/247444/files/static/v137/demo_compare.PNG"
+      }
+    }
+  }
+}
