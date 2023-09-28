@@ -24,7 +24,7 @@
   "oracle" : {
     "versions" : ["19.2.0.1", "12.1.0.1"],
     "apex" : {
-      "versions" : ["21.1.0"],
+      "versions" : ["23.1.0"],
       "plugin" : {
         "internalName" : "TEXT.COMPARE.EPOLANCO",
         "type" : "Template Component",
