@@ -5,7 +5,7 @@
   "keywords" : ["compare", "difference", "text", "report"],
   "homepage" : "https://github.com/ejpolanco/text_compare",
   "bugs" : {
-    "url" : "https://github.com/ejpolanco/text_compare/issues",
+    "url" : "https://github.com/ejpolanco/text_compare",
     "email" : "enderpolanco@gmail.com"
   },
   "license" : "MIT",
