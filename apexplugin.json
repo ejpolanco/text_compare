@@ -27,7 +27,7 @@
         "internalName" : "TEXT.COMPARE.EPOLANCO",
         "type" : "template component",
         "demo" : "https://apex.oracle.com/pls/apex/f?p=247444:2",
-        "previewImage" : "https://apex.oracle.com/pls/apex/r/ejpr/247444/files/static/v137/demo_compare.PNG"
+        "previewImage" : "https://raw.githubusercontent.com/ejpolanco/text_compare/master/demo_compare.PNG"
       }
     }
   }
