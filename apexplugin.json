@@ -13,8 +13,8 @@
   "author" : {
     "name" : "Ender Polanco",
     "email" : "enderpolanco@gmail.com",
-    "url" : "https://epolanco.dev/"
-    "twitter" : "ej_polanco"
+    "url" : "https://epolanco.dev",
+    "twitter" : "ej_polanco",
     "donationUrl" : ""
   },
   "repository" : {
