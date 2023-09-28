@@ -6,13 +6,13 @@
   "homepage" : "https://github.com/ejpolanco/text_compare",
   "bugs" : {
     "url" : "https://github.com/ejpolanco/text_compare",
-    "email" : "enderpolanco@gmail.com"
+    "email" : "epolanco@insum.ca"
   },
   "license" : "MIT",
   "commercial" : "No",
   "author" : {
     "name" : "Ender Polanco",
-    "email" : "enderpolanco@gmail.com",
+    "email" : "epolanco@insum.ca",
     "url" : "https://epolanco.dev"
   },
   "repository" : {
